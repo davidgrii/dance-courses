@@ -20,13 +20,13 @@ import { useAppSession } from '@/entities/user/session';
 import { signIn } from 'next-auth/react';
 
 
-const SidebarMenu = ({  navItems }) => {
+const SidebarMenu = ({ navItems }) => {
   const currentPage = usePathname();
-  const session = useAppSession()
+  const session = useAppSession();
 
   const { signOut, isPending: isLoadingSignOut } = useSignOut();
 
-  console.log()
+  console.log();
 
   const icons = [
     HomeIcon,

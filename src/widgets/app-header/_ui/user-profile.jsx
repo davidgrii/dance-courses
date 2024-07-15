@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button } from '@/shared/ui/button';
+import  defaultProfileImage  from '/public/avatar-placeholder.png'
 import Image from 'next/image';
 
 function UserProfileData({ userData }) {
 
-  const defaultProfileImage = 'https://cdn2-courses.iphonephotographyschool.com/83ded634-c96e-4dcf-a2c5-293353d49db2/images/avatar-placeholder.png';
+  const img = defaultProfileImage;
 
   return (
     <>
@@ -14,7 +15,7 @@ function UserProfileData({ userData }) {
             width={300}
             height={300}
             className="max-w-16 rounded-full"
-            src={userData.image ? userData.image : defaultProfileImage}
+            src={userData.image ? userData.image : img}
             alt={userData.name ? userData.name : 'Default User'}
           />
         </div>

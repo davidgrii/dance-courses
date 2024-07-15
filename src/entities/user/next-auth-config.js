@@ -2,9 +2,9 @@ import GoogleProvider from 'next-auth/providers/google';
 import Credentials from 'next-auth/providers/credentials';
 
 const user = [{
-  email: 'grikurovdavid@gmail.com',
-  name: 'David',
-  password: '12345678'
+  email: 'info@mimodajazzo.com',
+  name: 'Mimoda Jazzo',
+  password: 'MimodaJazzo5772!'
 }];
 
 export const nextAuthConfig = {

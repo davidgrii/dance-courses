@@ -49,11 +49,11 @@ const LoginForm = () => {
             className="block w-full font-light border-1 rounded-full py-4 text-lg px-7 bg-background/0 placeholder-foreground/70 xs:py-5"
             {...register('email')}
           />
-          {errors.email && <p className="text-red-500 pt-3">{errors.email.message}</p>}
           <i className="absolute right-[25px] flex items-center h-full opacity-80">
             {<EmailIcon />}
           </i>
         </div>
+        {errors.email && <p className="text-center text-red-500 pt-3">{errors.email.message}</p>}
       </div>
 
       <div className="relative mt-4">
@@ -67,11 +67,12 @@ const LoginForm = () => {
             className="block w-full font-light border-1 rounded-full py-4 text-lg px-7 bg-background/0 placeholder-foreground/70 xs:py-5"
             {...register('password')}
           />
-          {errors.password && <p className="text-red-500 pt-3">{errors.password.message}</p>}
           <i className="absolute right-[25px] flex items-center h-full opacity-80">
             {<PasswordIcon />}
           </i>
         </div>
+        {errors.password && <p className="text-center text-red-500 pt-3">{errors.password.message}</p>}
+
       </div>
       <CheckboxWithText id="1" />
       <div>
