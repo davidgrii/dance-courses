@@ -12,7 +12,7 @@ export const metadata = {
 const font = Manrope({
   subsets: ['latin'],
   variable: '--font-sans',
-  weight: '500'
+  weight: ['200', '300', '400', '500', '600', '700', '800']
 });
 
 export default function RootLayout({ children }) {

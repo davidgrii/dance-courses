@@ -57,7 +57,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
 
@@ -153,12 +153,12 @@ ul li {
 /*--------------------*/
 
 .wrapper {
+  @apply font-sans;
   width: 100%;
   background: radial-gradient(circle at 50% 50%, #1a1a2e, #09090b);
   margin: 0;
   align-items: center;
   color: white;
-  font-family: 'Manrope', sans-serif;
   text-align: center;
 }
 
