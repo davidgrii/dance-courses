@@ -2,7 +2,6 @@ import { SessionProvider as NextAuthSessionProvider, useSession } from 'next-aut
 
 export const useAppSession = useSession;
 
-
 export function AppSessionProvider({ children }) {
   return (
     <NextAuthSessionProvider>

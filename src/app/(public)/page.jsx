@@ -1,5 +1,4 @@
 import { Button } from '@/shared/ui/button';
-import { CarouselSize } from '@/shared/ui/courses';
 
 const Home = () => (
   <main>

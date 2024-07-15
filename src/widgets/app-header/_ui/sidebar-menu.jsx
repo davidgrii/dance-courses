@@ -20,11 +20,13 @@ import { useAppSession } from '@/entities/user/session';
 import { signIn } from 'next-auth/react';
 
 
-const SidebarMenu = ({ isAuth, navItems }) => {
+const SidebarMenu = ({  navItems }) => {
   const currentPage = usePathname();
   const session = useAppSession()
 
   const { signOut, isPending: isLoadingSignOut } = useSignOut();
+
+  console.log()
 
   const icons = [
     HomeIcon,
@@ -112,17 +114,3 @@ const SidebarMenu = ({ isAuth, navItems }) => {
 };
 
 export default SidebarMenu;
-
-
-{/*<div className="flex gap-2 items-center">*/
-}
-{/*  <>*/
-}
-{/*    <span>Eng </span> | <p>Ru</p>*/
-}
-{/*  </>*/
-}
-{/*  <LanguageIcon />*/
-}
-{/*</div>*/
-}

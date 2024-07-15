@@ -1,7 +1,6 @@
 import React from 'react';
 import { signIn } from 'next-auth/react';
 import { GoogleIcon } from '@/shared/icons/icons';
-import { Button } from '@/shared/ui/button';
 
 const GoogleSignInButton = () => {
   return (

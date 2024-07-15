@@ -5,6 +5,7 @@ import { LogIn } from 'lucide-react';
 import { signIn } from 'next-auth/react';
 
 const SignInButton = () => {
+
   const handleSignIn = () => signIn();
 
   return (
