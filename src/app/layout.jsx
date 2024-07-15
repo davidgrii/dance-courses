@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
     <body
       className={cn(
-        'min-h-screen bg-background font-sans initialised wrapper',
+        'min-h-screen bg-background initialised wrapper',
         font.variable
       )}
     >

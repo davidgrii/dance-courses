@@ -92,6 +92,7 @@ h6 {
 
 html,
 body {
+  font-family: __Manrope_7b1666;
   color: #a1a1aa;
   background-color: #09090b;
   width: 100%;
@@ -143,7 +144,6 @@ ul li {
 
 /*--------------------*/
 .wrapper {
-  @apply font-sans;
   width: 100%;
   background: radial-gradient(circle at 50% 50%, #1a1a2e, #09090b);
   margin: 0;
