@@ -7,7 +7,7 @@ const MainNav = ({ isAuth, navItems }) => {
   return (
     <nav className='flex items-start gap-6 text-sm flex-col'>
       <div className='flex items-center text-xl'>
-        <ul className='flex gap-7'>
+        <ul className='flex gap-7 text-lg'>
           {navItems.map(({ href, label, _blank, exact }) => (
             <li key={label}>
               <Link
@@ -20,8 +20,8 @@ const MainNav = ({ isAuth, navItems }) => {
             </li>
           ))}
         </ul>
-        <div className='flex gap-2.5 ml-24 text-[16px] items-center'>
-          <span className=' text-popover opacity-70 pt-1'>En </span> |{' '}
+        <div className='flex gap-2.5 ml-16 text-[16px] items-center'>
+          <span className='text-popover opacity-70 pt-1'>En </span> |{' '}
           <p className='pt-1 opacity-20'>Ru</p>
         </div>
       </div>

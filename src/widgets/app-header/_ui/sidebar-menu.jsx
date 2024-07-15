@@ -55,7 +55,7 @@ const SidebarMenu = ({  navItems }) => {
               <li key={label}>
                 <Link
                   href={href}
-                  className={`${currentPage === href ? 'text-foreground/100' : 'text-foreground/60'} flex items-center gap-2 text-foreground/100 transition-colors hover:text-foreground/90 py-2.5`}
+                  className={`${currentPage === href ? 'text-foreground/100 font-normal' : 'text-foreground/60'} flex items-center gap-2 text-foreground/100 font-light transition-colors hover:text-foreground/90 py-2.5`}
                   target={_blank ? '_blank' : '_self'}
                 >
                   {Icon && <Icon />}

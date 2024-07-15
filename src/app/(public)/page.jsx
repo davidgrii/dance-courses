@@ -18,7 +18,7 @@ const Home = () => (
         </div>
         {/*MAIN BLOCK*/}
         <section>
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-64">
+          <div className="mx-auto max-w-2xl py-32 sm:py-48">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div
                 className="relative rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-accent/35">
@@ -33,14 +33,15 @@ const Home = () => (
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
                 Design your body, redesign your mind
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-6 text-lg leading-8 text-gray-600 tracking-normal">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
                 qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
                 occaecat fugiat aliqua.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <Button variant="outline"
-                        className="rounded-full px-20 py-8 bg-none font-medium text-2xl text-foreground border-solid border border-border">
+                <Button
+                  variant="outline"
+                        className="rounded-full px-20 py-8 bg-none font-medium tracking-normal text-2xl text-foreground border-solid border border-border">
                   Get started
                 </Button>
               </div>
