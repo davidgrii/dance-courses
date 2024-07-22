@@ -1,11 +1,11 @@
 'use client';
 
 import { Button } from '@/shared/ui/button';
-import { EmailIcon, NameIcon, PasswordIcon } from '@/app/(auth)/auth/register/icons/icons';
-import CheckboxWithText from '@/app/(auth)/auth/register/_ui/register-checkbox';
+import CheckboxWithText from '@/features/auth/register/_ui/register-checkbox';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { registerFormSchema } from '@/app/validationSchemas';
+import { EmailIcon, NameIcon, PasswordIcon } from '@/shared/icons/icons';
 
 const RegisterForm = () => {
 

@@ -1,13 +1,13 @@
 'use client';
 
 import { Button } from '@/shared/ui/button';
-import { EmailIcon, PasswordIcon } from '@/app/(auth)/auth/login/icons/icons';
-import CheckboxWithText from '@/app/(auth)/auth/login/_ui/login-checkbox';
+import CheckboxWithText from '@/features/auth/login/_ui/login-checkbox';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { loginFormSchema } from '@/app/validationSchemas';
 import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
+import { EmailIcon, PasswordIcon } from '@/shared/icons/icons';
 
 const LoginForm = () => {
 

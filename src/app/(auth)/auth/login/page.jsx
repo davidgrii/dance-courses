@@ -1,8 +1,8 @@
-import Login from './Login';
+import Layout from '@/app/(auth)/auth/login/layout';
 
 const Page = () => {
   return (
-    <Login />
+    <Layout />
   );
 };
 

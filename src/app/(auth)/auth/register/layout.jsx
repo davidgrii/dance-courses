@@ -1,7 +1,7 @@
 import React from 'react';
-import GradientBackground from '@/app/(auth)/auth/register/_ui/register-gradient-bgc';
-import RegisterContainer from '@/app/(auth)/auth/register/_ui/register-container';
-import RegisterForm from '@/app/(auth)/auth/register/_ui/register-form';
+import GradientBackground from '@/features/auth/register/_ui/register-gradient-bgc';
+import RegisterContainer from '@/features/auth/register/_ui/register-container';
+import RegisterForm from '@/features/auth/register/_ui/register-form';
 
 const Layout = () => {
   return (

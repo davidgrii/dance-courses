@@ -1,7 +1,7 @@
-import Register from './Register';
+import Layout from '@/app/(auth)/auth/register/layout';
 
 const Page = () => {
-  return <Register />;
+  return <Layout />;
 };
 
 export default Page;

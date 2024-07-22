@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from '@/shared/ui/button';
-import CheckboxWithText from '@/app/(auth)/auth/login/_ui/login-checkbox';
+import CheckboxWithText from '@/features/auth/login/_ui/login-checkbox';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactFormSchema } from '@/app/validationSchemas';

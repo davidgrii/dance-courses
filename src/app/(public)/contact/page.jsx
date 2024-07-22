@@ -1,7 +1,7 @@
-import Contact from '@/app/(public)/contact/Contact';
+import Layout from '@/app/(public)/contact/layout';
 
 const Page = () => {
-  return <Contact />;
+  return <Layout />;
 };
 
 export default Page;

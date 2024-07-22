@@ -1,7 +1,7 @@
 import React from 'react';
-import { ArrowRight } from '@/app/(auth)/auth/register/icons/icons';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowRight } from '@/shared/icons/icons';
 
 const RegisterContainer = ({ form }) => {
   return (

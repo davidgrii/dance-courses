@@ -17,9 +17,8 @@ const NAV_ITEMS = [
 ];
 
 const AppHeader = ({ variant }) => {
-  const session = useAppSession()
 
-  console.log(session)
+  const session = useAppSession()
   const isAuth = variant !== 'auth';
 
   return (

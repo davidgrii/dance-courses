@@ -1,7 +1,7 @@
-import About from '@/app/(public)/about/About';
+import Layout from '@/app/(public)/about/layout';
 
 const Page = () => {
-  return <About />;
+  return <Layout />;
 };
 
 export default Page;

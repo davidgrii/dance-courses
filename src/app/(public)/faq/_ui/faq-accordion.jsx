@@ -5,9 +5,9 @@ import {
   AccordionTrigger,
 } from '@/shared/ui/accordion';
 
-export function AccordionDemo() {
+export function FaqsAccordion() {
   return (
-    <Accordion type='single' collapsible className='w-full'>
+    <Accordion type='single' collapsible className='w-full text-left flex flex-col gap-3'>
       <AccordionItem value='item-1'>
         <AccordionTrigger>How long has Jazzo been around?</AccordionTrigger>
         <AccordionContent>

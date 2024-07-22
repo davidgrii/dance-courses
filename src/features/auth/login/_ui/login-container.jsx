@@ -1,15 +1,14 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight } from '@/app/(auth)/auth/login/icons/icons';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowRight } from '@/shared/icons/icons';
 
 const LoginContainer = ({ form, googleBtn }) => {
   return (
     <div
       className="py-10 px-4 flex min-h-full flex-1 flex-col justify-center bg-background/90 border border-white/50 rounded-2xl xs:p-16 xs:px-8 sm:p-20">
-
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <Image
           width={200}

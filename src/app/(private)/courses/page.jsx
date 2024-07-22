@@ -1,9 +1,9 @@
 import React from 'react';
-import Courses from '@/app/(private)/courses/courses';
+import Layout from '@/app/(private)/courses/layout';
 
 const Page = () => {
   return (
-   <Courses/>
+   <Layout/>
   );
 };
 

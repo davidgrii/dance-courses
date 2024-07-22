@@ -1,7 +1,7 @@
-import Faq from '@/app/(public)/faq/Faq';
+import Layout from '@/app/(public)/faq/layout';
 
 const Page = () => {
-  return <Faq />;
+  return <Layout />;
 };
 
 export default Page;

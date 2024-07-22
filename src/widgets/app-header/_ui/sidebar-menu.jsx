@@ -9,7 +9,7 @@ import {
   HomeIcon,
   PhilosophyIcon,
   ArrowRight,
-  UserQuestionsIcon
+  QuestionsIcon
 } from '@/shared/icons/icons';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/shared/ui/button';
@@ -18,6 +18,7 @@ import UserProfileData from '@/widgets/app-header/_ui/user-profile';
 import { useSignOut } from '@/features/auth/use-sign-out';
 import { useAppSession } from '@/entities/user/session';
 import { signIn } from 'next-auth/react';
+import { Separator } from '@/shared/ui/separator';
 
 
 const SidebarMenu = ({ navItems }) => {
@@ -25,8 +26,7 @@ const SidebarMenu = ({ navItems }) => {
   const session = useAppSession();
 
   const { signOut, isPending: isLoadingSignOut } = useSignOut();
-
-  console.log();
+  const user = session?.data?.user;
 
   const icons = [
     HomeIcon,
@@ -34,45 +34,48 @@ const SidebarMenu = ({ navItems }) => {
     AboutUsIcon,
     PhilosophyIcon,
     ContactIcon,
-    UserQuestionsIcon
+    QuestionsIcon
   ];
 
-  const user = session?.data?.user;
-
   return (
-    <div className="flex flex-col h-full p-3 pt-1">
+    <div className="flex flex-col h-full pt-1">
       <div className="flex-auto">
-        <Logo text="Jazzo Studio.co" textSize="text-3xl" />
-        <div className="flex justify-between items-center">
-          {user && <UserProfileData userData={user} />}
+        <Logo />
+        <div className="flex justify-between items-center mb-[18px]">
+          {user && <UserProfileData userData={user} isLoading={session.status === 'loading'} />}
         </div>
-        <div className="h-[0.7px] bg-foreground/30 my-[25px] mx-[-8px] mb-[18px] border-none"></div>
-        <ul className="flex flex-col space-y-5 text-lg opacity-80">
+        <Separator/>
+        <ul className="flex flex-col space-y-4 text-lg opacity-80 my-[18px]">
           {navItems.map(({ href, label, _blank, exact }, index) => {
             const Icon = icons[index];
 
             return (
-              <li key={label}>
+              <li
+                key={label}>
                 <Link
                   href={href}
-                  className={`${currentPage === href ? 'text-foreground/100 font-normal' : 'text-foreground/60'} flex items-center gap-2 text-foreground/100 font-light transition-colors hover:text-foreground/90 py-2.5`}
+                  className={`${currentPage === href ? 'text-foreground/100 font-normal' : 'text-foreground/60'} rounded-lg flex items-center text-foreground/100 font-light transition-all  bg-background hover:text-foreground/90 hover:bg-foreground/5 py-2.5`}
                   target={_blank ? '_blank' : '_self'}
                 >
-                  {Icon && <Icon />}
-                  <span>- {label}</span>
+                  <div className='flex mx-2 gap-2'>
+                    {Icon && <Icon />}
+                    <span>- {label}</span>
+                  </div>
                 </Link>
               </li>
             );
           })}
         </ul>
-        <div className="h-[0.7px] bg-foreground/30 my-[25px] mx-[-8px] mb-[18px] border-none"></div>
-        <ul className="flex flex-col space-y-5 text-lg opacity-80">
+        <Separator/>
+        <ul className="flex flex-col space-y-4 text-lg opacity-80 my-[18px]">
           <Link
             href={'/faq'}
-            className={`${currentPage === '/faq' ? 'text-foreground/100' : 'text-foreground/60'} flex items-center gap-2 text-foreground/100 transition-colors hover:text-foreground/90 py-2.5`}
+            className={`${currentPage === '/faq' ? 'text-foreground/100' : 'text-foreground/60'} flex items-center gap-2 text-foreground/100 transition-all hover:bg-foreground/5 rounded-lg hover:text-foreground/90 py-2.5`}
           >
-            <UserQuestionsIcon />
-            <span>- FAQS</span>
+            <div className='flex mx-2 gap-2'>
+              <QuestionsIcon />
+              <span>- FAQS</span>
+            </div>
           </Link>
         </ul>
       </div>

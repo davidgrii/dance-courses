@@ -1,11 +1,10 @@
 'use client';
 
 import React from 'react';
-import LoginForm from '@/app/(auth)/auth/login/_ui/login-form';
-import GradientBackground from '@/app/(auth)/auth/login/_ui/login-gradient-bgc';
-import LoginContainer from '@/app/(auth)/auth/login/_ui/login-container';
+import LoginForm from '@/features/auth/login/_ui/login-form';
+import GradientBackground from '@/features/auth/login/_ui/login-gradient-bgc';
+import LoginContainer from '@/features/auth/login/_ui/login-container';
 import GoogleSignInButton from '@/features/auth/google-sign-in-button';
-
 
 const Layout = () => {
   return (
