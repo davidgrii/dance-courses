@@ -22,7 +22,7 @@ const NavCourses = () => {
       <CardContent>
         <div>
           <div className="text-left space-y-1">
-            <h2 className="text-xl font-normal leading-none">Courses in Jazzo Studio</h2>
+            <h2 className="text-2xl font-semibold leading-none">Courses in Jazzo Studio</h2>
             <p className="text-sm text-muted-foreground">
               Here you can view courses you have already purchased, or you can purchase new ones
             </p>
