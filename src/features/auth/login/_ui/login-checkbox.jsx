@@ -2,9 +2,10 @@
 
 import { Checkbox } from '@/shared/ui/checkbox';
 
-const CheckboxWithText = () => (
+
+const CheckboxWithText = ({ checked, onCheckedChange  }) => (
   <div className='items-top flex space-x-2 '>
-    <Checkbox />
+    <Checkbox checked={checked} onCheckedChange={onCheckedChange } />
     <div className='grid gap-1.5 text-left leading-none'>
       <label
         htmlFor='terms1'

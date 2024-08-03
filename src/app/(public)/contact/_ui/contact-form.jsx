@@ -1,9 +1,10 @@
 'use client';
 
+import { Spinner } from '@/shared/ui/spinner';
 import React from 'react';
 import { Button } from '@/shared/ui/button';
 import CheckboxWithText from '@/features/auth/login/_ui/login-checkbox';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactFormSchema } from '@/app/validationSchemas';
 import { EmailIcon, NameIcon, PhoneNumberIcon } from '@/app/(public)/contact/icons/icons';
@@ -13,13 +14,37 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    control,
+    formState: { errors, isSubmitting }
   } = useForm({
-    resolver: zodResolver(contactFormSchema)
+    resolver: zodResolver(contactFormSchema),
+    mode: 'onChange'
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+      } else {
+        alert(`Failed to send message: ${result.error}`);
+      }
+
+    } catch (error) {
+      alert('An error occurred while sending the message.');
+      console.error('Error:', error);
+    }
+
   };
 
   return (
@@ -95,14 +120,33 @@ const ContactForm = () => {
               {errors.message && <p className="text-red-500 pt-3">{errors.message.message}</p>}
             </div>
           </div>
+          <div className="sm:col-span-2">
+            <Controller
+              name="agreeToTerms"
+              control={control}
+              defaultValue={true}
+              render={({ field }) => (
+                <CheckboxWithText
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              )}
+            />
+            {errors.agreeToTerms && <p className="text-red-500 pt-3">{errors.agreeToTerms.message}</p>}
+          </div>
         </div>
         <div className="mt-6">
-          <CheckboxWithText />
           <Button
             type="submit"
             className="rounded-full mt-5 w-full px-20 py-8 bg-background/0 font-medium tracking-wide text-2xl text-foreground border-solid border border-border"
           >
-            SEND
+            {isSubmitting ?
+              <Spinner
+                className="h-2 w-2 animate-spin"
+                aria-label="Loading"
+              />
+              : 'SEND'
+            }
           </Button>
         </div>
       </form>

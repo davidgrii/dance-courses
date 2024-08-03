@@ -30,7 +30,7 @@ const LoginForm = () => {
     });
 
     if (res && !res.error) {
-      router.push('/');
+      router.replace('/');
     } else {
       console.log(res);
     }

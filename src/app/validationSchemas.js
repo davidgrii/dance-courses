@@ -4,7 +4,8 @@ export const contactFormSchema = z.object({
   name: z.string().min(2).nonempty('First name is required'),
   email: z.string().email('Invalid email address').nonempty('Email is required'),
   phoneNumber: z.string().nonempty('Phone number is required'),
-  message: z.string().optional()
+  message: z.string().optional(),
+  agreeToTerms: z.boolean().refine((value) => value === true, { message: 'You must agree to the terms and conditions' })
 });
 
 export const registerFormSchema = z.object({

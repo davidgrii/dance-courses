@@ -2,8 +2,8 @@ export function Spinner() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1.7em"
-      height="1.7em"
+      width="1.5em"
+      height="1.5em"
       viewBox="0 0 24 24"
     >
       <g stroke="currentColor">
@@ -13,7 +13,7 @@ export function Spinner() {
           r="9.5"
           fill="none"
           strokeLinecap="round"
-          strokeWidth="3"
+          strokeWidth="2.5"
         >
           <animate
             attributeName="stroke-dasharray"

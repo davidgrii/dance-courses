@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '@/app/(private)/courses/layout';
+import Layout from '@/features/courses/_ui/layout';
 
 const Page = () => {
   return (

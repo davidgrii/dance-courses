@@ -1,7 +1,7 @@
 import { useAppearanceDelay } from '../lib/react';
 import { Spinner } from './spinner';
 import React from 'react';
-import GradientBackground from '@/app/(private)/courses/_ui/courses-gradient-bgc';
+import GradientBackground from '@/features/courses/_ui/courses-gradient-bgc';
 
 export function FullPageSpinner({ isLoading }) {
   const show = useAppearanceDelay(isLoading);
