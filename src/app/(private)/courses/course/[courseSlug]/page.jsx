@@ -23,10 +23,10 @@ const Page = ({ params }) => {
             className="w-1/3 text-foreground drop-shadow-xl shadow-white/10 border-border/60 bg-[#171719d9]/30 backdrop-blur">
             <CardHeader>
               <CardTitle className="pt-2 text-foreground text-3xl font-medium">
-                My courses
+                video of this course
               </CardTitle>
               <CardDescription>
-                All courses currently available to you
+
               </CardDescription>
             </CardHeader>
             <CardContent>
