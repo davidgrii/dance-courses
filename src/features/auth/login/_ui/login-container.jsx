@@ -34,20 +34,20 @@ const LoginContainer = ({ form, googleBtn }) => {
       <div className="mt-3 xs:mt-6 sm:mx-auto sm:w-full sm:max-w-screen-sm">
         {/*LOGIN FORM*/}
         {form}
-        <div
-          className="mt-6 text-sm flex justify-center text-center text-foreground/60 font-light gap-1 xs:mt-10 xs:text-lg">
-          <Link
-            href={'/auth/register'}
-            className="inline-flex items-center leading-6 text-foreground/70 font-light"
-          >
-            <p className="">{'Don\'t have an account?'}</p>
-            <ArrowRight />
-            <span
-              className="inline-flex items-center font-medium leading-6 text-foreground/90">
-            Register
-          </span>
-          </Link>
-        </div>
+        {/*<div*/}
+        {/*  className="mt-6 text-sm flex justify-center text-center text-foreground/60 font-light gap-1 xs:mt-10 xs:text-lg">*/}
+        {/*  <Link*/}
+        {/*    href={'/auth/register'}*/}
+        {/*    className="inline-flex items-center leading-6 text-foreground/70 font-light"*/}
+        {/*  >*/}
+        {/*    <p className="">{'Don\'t have an account?'}</p>*/}
+        {/*    <ArrowRight />*/}
+        {/*    <span*/}
+        {/*      className="inline-flex items-center font-medium leading-6 text-foreground/90">*/}
+        {/*    Register*/}
+        {/*  </span>*/}
+        {/*  </Link>*/}
+        {/*</div>*/}
       </div>
     </div>
   );
