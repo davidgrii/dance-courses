@@ -29,8 +29,6 @@ const NavCourses = () => {
           </div>
           <Separator className="my-4" />
           <TabsList className="flex h-5 items-center space-x-4 text-sm bg-background/0">
-            <TabsTrigger value="My courses">My courses</TabsTrigger>
-            <Separator orientation="vertical" />
             <TabsTrigger value="All courses">All courses</TabsTrigger>
             <Separator orientation="vertical" />
             <TabsTrigger value="Complete courses">Complete courses</TabsTrigger>
