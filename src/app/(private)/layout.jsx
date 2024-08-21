@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       <AuthorizedGuard>
         {children}
       </AuthorizedGuard>
-      <AppFooter />
+      {/*<AppFooter />*/}
     </>
   );
 };

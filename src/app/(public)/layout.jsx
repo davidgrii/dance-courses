@@ -7,7 +7,7 @@ const Layout = ({children}) => {
     <>
       <AppHeader variant='public'/>
       {children}
-      <AppFooter/>
+      {/*<AppFooter/>*/}
     </>
   );
 };

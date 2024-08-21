@@ -46,16 +46,16 @@ const TabsCourses = () => {
       <TabsContent value="All courses">
         <Card
           className="text-foreground drop-shadow-xl shadow-white/10 border-border/60 bg-[#171719d9]/30 backdrop-blur ">
-          <CardHeader>
-            <CardTitle className="pt-2 text-foreground text-3xl font-medium">
+          <CardHeader className={'p-4 sm:p-6'}>
+            <CardTitle className="text-foreground text-3xl font-medium sm:pt-2 ">
               All courses
             </CardTitle>
             <CardDescription>
               All courses on our platform
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 gap-7">
+          <CardContent className={'px-5 sm:p-7'}>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-7">
               {isLoading ?
                 courses.map((item, index) => (
                   <CardSkeleton key={index} />

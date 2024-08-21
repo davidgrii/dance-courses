@@ -18,7 +18,7 @@ const Layout = () => {
     <div className="bg-background">
       <div className="relative isolate px-4 xs:px-6 pt-14 lg:px-8">
         <GradientBackground position="top" />
-        <main className="mx-auto max-w-7xl py-20 sm:py-20 px-4">
+        <main className="py-14 mx-auto max-w-7xl sm:py-20 px-4">
           <TabsCourses/>
         </main>
         <GradientBackground position="bottom" />
