@@ -50,7 +50,7 @@ const ContactForm = () => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-xl sm:mt-10">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 text-left font-light">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 text-left font-light sm:gap-y-6">
           <div className="sm:col-span-2">
             <div className="relative">
               <input
@@ -135,10 +135,10 @@ const ContactForm = () => {
             {errors.agreeToTerms && <p className="text-red-500 pt-3">{errors.agreeToTerms.message}</p>}
           </div>
         </div>
-        <div className="mt-6">
+        <div className="mt-3 sm:mt-6">
           <Button
             type="submit"
-            className="rounded-full mt-5 w-full px-20 py-8 bg-background/0 font-medium tracking-wide text-2xl text-foreground border-solid border border-border"
+            className="rounded-full mt-2 w-full px-20 py-8 bg-background/0 font-medium tracking-wide text-2xl text-foreground border-solid border border-border sm:mt-5"
           >
             {isSubmitting ?
               <Spinner

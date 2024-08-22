@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaqsAccordion } from '@/app/(public)/faq/_ui/faq-accordion';
 import GradientBackground from '@/app/(public)/faq/_ui/faq-gradient-bgc';
-import Image from 'next/image';
 import { Card, CardContent } from '@/shared/ui/card';
 
 

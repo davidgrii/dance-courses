@@ -7,7 +7,7 @@ const ContactContainer = ({ form }) => {
         <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-5xl">
           Contact us
         </h2>
-        <p className="mt-3 text-lg leading-8 text-muted-foreground font-light max-w-[360px] text-center">
+        <p className="mt-3 mb-4 text-sm  text-muted-foreground font-light max-w-[360px] text-center sm:text-lg sm:mb-0">
           If you are interested in being on our mailing list for our instructor
           courses, please let us know!
         </p>

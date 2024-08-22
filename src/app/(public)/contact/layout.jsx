@@ -8,11 +8,10 @@ const Layout = () => {
   return (
     <section id="contact">
       <main>
-        <div className="isolate bg-background px-4 xs:px-6 py-20 sm:pt-32 lg:px-8">
+        <div className="isolate bg-background px-4 pt-28 xs:px-6 py-20 sm:pt-32 lg:px-8">
           <GradientBackground position="top" />
           <div className='mx-auto max-w-3xl'>
             <ContactContainer form={<ContactForm />} />
-
           </div>
           <GradientBackground position="bottom" />
         </div>
