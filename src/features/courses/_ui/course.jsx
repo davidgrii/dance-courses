@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Progress } from '@/shared/ui/progress';
 import { Button } from '@/shared/ui/button';
 import Link from 'next/link';
+import { Separator } from '@/shared/ui/separator';
 
 const Course = ({ title, previewImage, description, kajabiLink, index, typeCourse }) => {
   return (
@@ -29,7 +30,7 @@ const Course = ({ title, previewImage, description, kajabiLink, index, typeCours
           </div>
         </div>
 
-        <Progress value={33} />
+        <Separator className={'h-[1px] bg-white/40'}/>
 
         <div className="px-4 py-4 relative flex justify-between items-center bg-[#171719d9] backdrop-blur-lg rounded-lg shadow-lg sm:px-6 sm:py-7">
           <div

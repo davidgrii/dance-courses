@@ -1,8 +1,8 @@
 import nodemailer from 'nodemailer';
 
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { name, email, phoneNumber, message } = req.body;
+export async function POST(request) {
+  try {
+    const { name, email, phoneNumber, message } = await request.json();
 
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_SERVER_HOST,
@@ -21,13 +21,18 @@ export default async function handler(req, res) {
       text: `From ${email}\nPhone: ${phoneNumber}\n\nMessage: ${message} `
     };
 
-    try {
-      await transporter.sendMail(mailOptions);
-      res.status(200).json({ success: true });
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-  } else {
-    res.status(405).json({ error: 'Method not allowed' });
+    await transporter.sendMail(mailOptions);
+
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
 }
+

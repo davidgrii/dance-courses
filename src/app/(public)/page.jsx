@@ -1,4 +1,7 @@
+'use client'
+
 import { Button } from '@/shared/ui/button';
+import TabsCourses from '@/features/courses/_ui/tabs-courses';
 
 const Home = () => (
   <main>
@@ -16,7 +19,7 @@ const Home = () => (
             }}
           />
         </div>
-        {/*MAIN BLOCK*/}
+
         <section>
           <div className="mx-auto max-w-2xl py-32 sm:py-48">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
@@ -48,15 +51,14 @@ const Home = () => (
             </div>
           </div>
         </section>
+
         {/*COURSES BLOCK*/}
-        {/*<section>*/}
-        {/*  <div className='flex justify-center pb-10'>*/}
-        {/*    <CarouselSize>*/}
+        <section>
+          <div className='flex justify-center pb-10'>
+           <TabsCourses/>
+          </div>
+        </section>
 
-        {/*    </CarouselSize>*/}
-        {/*  </div>*/}
-
-        {/*</section>*/}
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"

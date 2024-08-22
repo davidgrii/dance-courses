@@ -29,11 +29,11 @@ const NavCourses = () => {
           </div>
           <Separator className="my-4 h-[1px]" />
           <TabsList className="flex h-5 items-center space-x-1 bg-background/0 sm:flex-row sm:space-x-4 ">
-            <TabsTrigger className={'text-xs p-1 sm:text-sm'} value="All courses">All courses</TabsTrigger>
+            <TabsTrigger className={'text-xs p-1 sm:text-lg'} value="All courses">All courses</TabsTrigger>
             <Separator orientation="vertical"  />
-            <TabsTrigger className={'text-xs p-1 sm:text-sm'} value="Complete courses">Complete courses</TabsTrigger>
+            <TabsTrigger className={'text-xs p-1 sm:text-lg'} value="Complete courses">Complete courses</TabsTrigger>
             <Separator orientation="vertical"  />
-            <TabsTrigger className={'text-xs p-1 sm:text-sm'} value="Mini courses">Mini courses</TabsTrigger>
+            <TabsTrigger className={'text-xs p-1 sm:text-lg'} value="Mini courses">Mini courses</TabsTrigger>
           </TabsList>
         </>
       </CardContent>

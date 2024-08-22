@@ -47,14 +47,14 @@ const TabsCourses = () => {
         <Card
           className="text-foreground drop-shadow-xl shadow-white/10 border-border/60 bg-[#171719d9]/30 backdrop-blur ">
           <CardHeader className={'p-4 sm:p-6'}>
-            <CardTitle className="text-foreground text-3xl font-medium sm:pt-2 ">
+            <CardTitle className="text-2xl text-foreground font-medium sm:pt-2 sm:text-3xl">
               All courses
             </CardTitle>
             <CardDescription>
               All courses on our platform
             </CardDescription>
           </CardHeader>
-          <CardContent className={'px-5 sm:p-7'}>
+          <CardContent className={''}>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-7">
               {isLoading ?
                 courses.map((item, index) => (
@@ -77,11 +77,12 @@ const TabsCourses = () => {
           </CardContent>
         </Card>
       </TabsContent>
+
       <TabsContent value="Complete courses">
         <Card
           className="text-foreground drop-shadow-xl shadow-white/10 border-border/60 bg-[#171719d9]/30 backdrop-blur ">
-          <CardHeader>
-            <CardTitle className="pt-6 text-foreground text-3xl font-medium">
+          <CardHeader className={'p-4 sm:p-6'}>
+            <CardTitle className="text-2xl text-foreground font-medium sm:pt-2 sm:text-3xl">
               Complete courses
             </CardTitle>
             <CardDescription>
@@ -89,15 +90,35 @@ const TabsCourses = () => {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2">
-
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-7">
+              {isLoading ?
+                courses.map((item, index) => (
+                  <CardSkeleton key={index} />
+                ))
+                :
+                courses.map((item, index) => (
+                  item.courseType === 'Complete course' &&
+                  <Course
+                    key={index}
+                    index={index}
+                    title={item.title}
+                    description={item.description}
+                    kajabiLink={item.kajabiLink}
+                    typeCourse={item.courseType}
+                    previewImage={item.previewImage}
+                  />
+                ))
+              }
+            </div>
           </CardContent>
         </Card>
       </TabsContent>
+
       <TabsContent value="Mini courses">
         <Card
           className="text-foreground drop-shadow-xl shadow-white/10 border-border/60 bg-[#171719d9]/30 backdrop-blur ">
-          <CardHeader>
-            <CardTitle className="pt-6 text-foreground text-3xl font-medium">
+          <CardHeader className={'p-4 sm:p-6'}>
+            <CardTitle className="text-2xl text-foreground font-medium sm:pt-2 sm:text-3xl">
               Mini courses
             </CardTitle>
             <CardDescription>
@@ -105,7 +126,26 @@ const TabsCourses = () => {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2">
-
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-7">
+              {isLoading ?
+                courses.map((item, index) => (
+                  <CardSkeleton key={index} />
+                ))
+                :
+                courses.map((item, index) => (
+                  item.courseType === 'Mini course' &&
+                  <Course
+                    key={index}
+                    index={index}
+                    title={item.title}
+                    description={item.description}
+                    kajabiLink={item.kajabiLink}
+                    typeCourse={item.courseType}
+                    previewImage={item.previewImage}
+                  />
+                ))
+              }
+            </div>
           </CardContent>
         </Card>
       </TabsContent>

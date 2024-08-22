@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '@/features/courses/_ui/layout';
 
-const Page = () => {
+const CoursesPage = () => {
   return (
    <Layout/>
   );
 };
 
-export default Page;
+export default CoursesPage;
