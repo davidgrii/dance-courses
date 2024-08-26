@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <Link className='flex items-center ' href='/'>
       <span className='text-2xl lg:text-4xl pl-1 font-bold inline-block text-foreground'>
-        Jazzo Studio.co
+        JAZZO.co
       </span>
     </Link>
   );

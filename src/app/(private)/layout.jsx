@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <>
       <AppHeader variant="private" />
       <AuthorizedGuard>
-        {children}
+          {children}
       </AuthorizedGuard>
       <AppFooter />
     </>

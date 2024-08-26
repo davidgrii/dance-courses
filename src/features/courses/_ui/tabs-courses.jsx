@@ -11,7 +11,6 @@ import image3 from 'public/course-images/vlcsnap-2024-08-15-14h33m14s927.png';
 const TabsCourses = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-
   const courses = [
     {
       title: 'Jazzo Dance Biomechanics',
@@ -41,11 +40,12 @@ const TabsCourses = () => {
 
   return (
     <Tabs defaultValue="All courses">
-      <NavCourses />
+
+    <NavCourses />
 
       <TabsContent value="All courses">
         <Card
-          className="text-foreground drop-shadow-xl shadow-white/10 border-border/60 bg-[#171719d9]/30 backdrop-blur ">
+          className="text-foreground drop-shadow-xl shadow-white/10 border-border/60 bg-[#171719d9]/30 backdrop-blur">
           <CardHeader className={'p-4 sm:p-6'}>
             <CardTitle className="text-2xl text-foreground font-medium sm:pt-2 sm:text-3xl">
               All courses
@@ -54,7 +54,7 @@ const TabsCourses = () => {
               All courses on our platform
             </CardDescription>
           </CardHeader>
-          <CardContent className={''}>
+          <CardContent>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-7">
               {isLoading ?
                 courses.map((item, index) => (

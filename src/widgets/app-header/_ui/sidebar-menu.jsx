@@ -8,7 +8,6 @@ import {
   CoursesIcon,
   HomeIcon,
   PhilosophyIcon,
-  ArrowRight,
   QuestionsIcon
 } from '@/shared/icons/icons';
 import { usePathname } from 'next/navigation';

@@ -3,7 +3,7 @@ import Layout from '@/features/courses/_ui/layout';
 
 const CoursesPage = () => {
   return (
-   <Layout/>
+    <Layout />
   );
 };
 
